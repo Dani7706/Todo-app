@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     'devsearch.common',
     'devsearch.projects',
+    'devsearch.tags',
+    'devsearch.reviews',
 ]
 
 MIDDLEWARE = [

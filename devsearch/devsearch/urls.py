@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('devsearch.common.urls')),
     path('projects/', include('devsearch.projects.urls')),
+    path('tags/', include('devsearch.tags.urls')),
+    path('reviews/', include('devsearch.reviews.urls')),
 ]

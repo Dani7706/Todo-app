@@ -1,8 +1,0 @@
-{% extends 'base.html' %} {% block content %}
-<form method="post">
-  <h1>Are you sure you want to delete the project?</h1>
-  <button type="submit">Yes</button>
-  <a type="button" href="javascript: history.back()">Go back</a>
-  {% csrf_token %}
-</form>
-{% endblock %}

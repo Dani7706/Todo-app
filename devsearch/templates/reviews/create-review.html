@@ -1,0 +1,7 @@
+<form method="post" action={% url 'review add' project_id=project.pk %}>
+    {{form.description}}
+    {{ form.value }}
+
+    <button type="submit">Submit</button>
+    {% csrf_token %}
+</form>

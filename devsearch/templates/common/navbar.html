@@ -1,0 +1,14 @@
+{% load static %}
+<a href="{% url 'index' %}">
+    <img src="{% static 'images/logo.svg' %}" alt="Logo Devsearch">
+</a>
+
+<nav>
+    <ul class="nav-list">
+        <li><a href="{% url 'projects' %}" class="nav-link">Developers</a></li>
+        <li><a href="{% url 'projects' %}" class="nav-link">Projects</a></li>
+        <li><a href="{% url 'tags' %}" class="nav-link">Tags</a></li>
+        <li><a href="{% url 'projects' %}" class="nav-link">Accounts</a></li>
+        <li><a href="{% url 'projects' %}" class="nav-link">Inbox</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+    <section class="hero-section--list">
+        <div class="hero">
+            <h1 class="heading-primary heading-primary--list">Search for projects</h1>
+            <form class="hero-form">
+                <input placeholder="Search by developer name" class="hero-input">
+                <button class="btn btn-search">Search</button>
+            </form>
+        </div>
+
+    </section>
+    <section class="projects-section">
+        <div class="container project-list">
+            <a class="btn btn-add" href={% url 'project create' %}>Add new project</a>
+        <div class="grid grid--3-cols">
+            {% for project in object_list %}
+                <card class="card">
+                    <div>
+                        <img class="img" src="{{ project.featured_image.url }}">
+                    </div>
+                    <div class="card-description">
+                        <a class="card-title" href={% url 'project details' pk=project.pk %}>{{ project.title }}</a>
+                        <ul class="card-tags">
+                            {% for tag in project.tags.all %}
+                                <li class="card-tag">{{ tag.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </card>
+{#                <li>#}
+{##}
+{#                    <a href={% url 'project edit' pk=project.pk %}>Edit</a>#}
+{#                    <a href={% url 'project delete' pk=project.pk %}>Delete</a>#}
+{#                </li>#}
+
+            {% endfor %}
+        </div>
+
+        </div>
+    </section>
+
+
+{% endblock %}

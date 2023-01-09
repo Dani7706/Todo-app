@@ -10,7 +10,8 @@ from devsearch.reviews.models import Review
 class ProjectsListView(ListView):
     model=Project
     template_name='projects/projects-list.html'
-    
+
+
 
         
 

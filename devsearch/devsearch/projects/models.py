@@ -22,6 +22,11 @@ class Project(models.Model):
         null=True,
         blank=True,
     )
+    featured_image=models.ImageField(
+        null=True,
+        blank=True,
+        default="default-project.png"
+    )
     demo_link= models.CharField(
         max_length=MAX_DEMO_LINK_LENGTH,
         null=True,
